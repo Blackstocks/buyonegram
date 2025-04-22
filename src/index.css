@@ -1,0 +1,147 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-neutral-800 bg-neutral-50;
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1440px] mx-auto w-full;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-xl font-semibold 
+           transition-all duration-300 hover:bg-primary-700 
+           hover:shadow-[0_0_20px_rgba(135,195,25,0.3)] 
+           active:transform active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-primary-600 border-2 border-primary-600 px-6 py-3 
+           rounded-xl font-semibold transition-all duration-300 
+           hover:bg-primary-50 hover:border-primary-700 hover:text-primary-700
+           active:transform active:scale-95;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft transition-all duration-300 
+           hover:shadow-medium;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 md:px-6 lg:px-8 xl:px-12;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r 
+           from-primary-600 to-secondary-500;
+  }
+
+  .bg-dot-pattern {
+    background-size: 20px 20px;
+    @apply bg-gradient-dots;
+  }
+  
+  /* Mobile-specific animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-fadeInUp {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+  
+  .animate-fadeInRight {
+    animation: fadeInRight 0.5s ease-out forwards;
+  }
+  
+  .scale-102 {
+    transform: scale(1.02);
+  }
+  
+  .scale-98 {
+    transform: scale(0.98);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-500 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-600;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 767px) {
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+}
