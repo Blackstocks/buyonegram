@@ -12,10 +12,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-white">BuyOneGram</h3>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="leading-relaxed text-gray-300">
               Connecting farmers and buyers worldwide through our innovative B2B marketplace.
             </p>
-            <div className="flex space-x-4 pt-2">
+            <div className="flex pt-2 space-x-4">
               <a href="https://www.facebook.com/buyonegram/" className="text-gray-400 transition-all duration-300 hover:text-white hover:scale-110">
                 <FaFacebook size={24} />
               </a>
@@ -36,25 +36,25 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-white border-b border-gray-700 pb-2">Quick Links</h3>
+            <h3 className="pb-2 text-xl font-semibold text-white border-b border-gray-700">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   Products
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   Contact
                 </a>
               </li>
@@ -63,25 +63,25 @@ const Footer = () => {
 
           {/* Legal */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-white border-b border-gray-700 pb-2">Legal</h3>
+            <h3 className="pb-2 text-xl font-semibold text-white border-b border-gray-700">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   Cookie Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1 inline-block">
+                <a href="#" className="inline-block text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
                   Shipping Policy
                 </a>
               </li>
@@ -90,14 +90,14 @@ const Footer = () => {
 
           {/* Subdomains */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-white border-b border-gray-700 pb-2">Subdomains</h3>
+            <h3 className="pb-2 text-xl font-semibold text-white border-b border-gray-700">Subdomains</h3>
             <ul className="space-y-4">
               <li>
                 <a 
                   href="https://visit.buyonegram.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="group flex items-center space-x-2 text-gray-300 transition-all duration-300 hover:text-white"
+                  className="flex items-center space-x-2 text-gray-300 transition-all duration-300 group hover:text-white"
                 >
                   <FaGlobe className="text-gray-400 group-hover:text-primary-500" />
                   <span className="border-b border-transparent group-hover:border-white">
@@ -110,7 +110,7 @@ const Footer = () => {
                   href="https://spinwheel.buyonegram.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="group flex items-center space-x-2 text-gray-300 transition-all duration-300 hover:text-white"
+                  className="flex items-center space-x-2 text-gray-300 transition-all duration-300 group hover:text-white"
                 >
                   <FaGlobe className="text-gray-400 group-hover:text-primary-500" />
                   <span className="border-b border-transparent group-hover:border-white">
@@ -123,7 +123,7 @@ const Footer = () => {
                   href="https://thanks.buyonegram.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="group flex items-center space-x-2 text-gray-300 transition-all duration-300 hover:text-white"
+                  className="flex items-center space-x-2 text-gray-300 transition-all duration-300 group hover:text-white"
                 >
                   <FaGlobe className="text-gray-400 group-hover:text-primary-500" />
                   <span className="border-b border-transparent group-hover:border-white">
@@ -136,15 +136,15 @@ const Footer = () => {
 
           {/* Location */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-white border-b border-gray-700 pb-2">Our Location</h3>
+            <h3 className="pb-2 text-xl font-semibold text-white border-b border-gray-700">Our Location</h3>
             <button
               onClick={() => setIsMapOpen(true)}
               className="flex items-center space-x-2 text-gray-300 transition-all duration-300 hover:text-white group"
             >
-              <FaMapMarkerAlt className="text-2xl text-primary-500 group-hover:scale-110 transition-transform duration-300" />
+              <FaMapMarkerAlt className="text-2xl transition-transform duration-300 text-primary-500 group-hover:scale-110" />
               <span className="border-b border-transparent group-hover:border-white">View on Map</span>
             </button>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="leading-relaxed text-gray-300">
               G-222, RIICO, sitapura industrial area, tonk road Jaipur, rajasthan 302019
             </p>
           </div>
@@ -152,7 +152,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 text-center border-t border-gray-700">
-          <p className="text-gray-400 text-sm">&copy; {new Date().getFullYear()} BuyOneGram. All rights reserved.</p>
+          <p className="text-sm text-gray-400">&copy; 2020 BuyOneGram. All rights reserved.</p>
         </div>
       </div>
 
@@ -163,20 +163,20 @@ const Footer = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70"
+            className="flex fixed inset-0 z-50 justify-center items-center p-4 bg-black/70"
             onClick={() => setIsMapOpen(false)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-4xl overflow-hidden bg-white rounded-xl"
+              className="overflow-hidden relative w-full max-w-4xl bg-white rounded-xl"
               onClick={e => e.stopPropagation()}
             >
               {/* Close Button */}
               <button
                 onClick={() => setIsMapOpen(false)}
-                className="absolute z-10 text-gray-500 top-4 right-4 hover:text-gray-700"
+                className="absolute top-4 right-4 z-10 text-gray-500 hover:text-gray-700"
               >
                 <FaTimes size={24} />
               </button>
