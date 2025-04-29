@@ -1,6 +1,6 @@
 import { motion, useAnimationControls } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-import { client1, client2, client3, client4, client5, client6, client7, client8, client9 } from '../../assets';
+import { client1, client2, client3, client4, client5, client6, client7, client8, client9 } from '../../public';
 import LazyImage from '../LazyImage';
 
 const clients = [
@@ -67,13 +67,13 @@ const TrustIndicators = () => {
   };
 
   return (
-    <section className="py-12 md:py-16 overflow-hidden bg-white">
+    <section className="overflow-hidden py-12 bg-white md:py-16">
       <div className="container px-4 mx-auto">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-8 md:mb-12 text-2xl md:text-3xl font-bold text-center text-gray-800"
+          className="mb-8 text-2xl font-bold text-center text-gray-800 md:mb-12 md:text-3xl"
         >
           Trusted by Industry Leaders
         </motion.h2>
@@ -85,16 +85,16 @@ const TrustIndicators = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mb-6 md:mb-8 text-lg md:text-xl font-semibold text-center text-gray-700"
+            className="mb-6 text-lg font-semibold text-center text-gray-700 md:mb-8 md:text-xl"
           >
             Our Clients
           </motion.h3>
           
           {/* Infinite Slider */}
-          <div className="relative w-full overflow-hidden">
+          <div className="overflow-hidden relative w-full">
             <motion.div 
               ref={sliderRef}
-              className="flex gap-4 md:gap-8 py-4"
+              className="flex gap-4 py-4 md:gap-8"
               animate={controls}
             >
               {/* First set */}
@@ -108,13 +108,13 @@ const TrustIndicators = () => {
                     whileInView={isMobile ? "onscreen" : { opacity: 1 }}
                     variants={isMobile ? mobileCardAnimation : undefined}
                     viewport={{ once: true }}
-                    className="flex items-center justify-center w-full h-full p-3 md:p-4 transition-all duration-300 bg-white shadow-md rounded-xl hover:shadow-xl hover:-translate-y-1"
+                    className="flex justify-center items-center p-3 w-full h-full bg-white rounded-xl shadow-md transition-all duration-300 md:p-4 hover:shadow-xl hover:-translate-y-1"
                   >
-                    <div className="flex items-center justify-center w-full h-full overflow-hidden">
+                    <div className="flex overflow-hidden justify-center items-center w-full h-full">
                       <LazyImage
                         src={client.logo}
                         alt={client.name}
-                        className="w-3/4 transition-transform duration-300 transform h-3/4 hover:scale-110"
+                        className="w-3/4 h-3/4 transition-transform duration-300 transform hover:scale-110"
                         centerImage={true}
                         onError={(e) => {
                           e.target.src = '/clients/placeholder.png';
@@ -136,13 +136,13 @@ const TrustIndicators = () => {
                     whileInView={isMobile ? "onscreen" : { opacity: 1 }}
                     variants={isMobile ? mobileCardAnimation : undefined}
                     viewport={{ once: true }}
-                    className="flex items-center justify-center w-full h-full p-3 md:p-4 transition-all duration-300 bg-white shadow-md rounded-xl hover:shadow-xl hover:-translate-y-1"
+                    className="flex justify-center items-center p-3 w-full h-full bg-white rounded-xl shadow-md transition-all duration-300 md:p-4 hover:shadow-xl hover:-translate-y-1"
                   >
-                    <div className="flex items-center justify-center w-full h-full overflow-hidden">
+                    <div className="flex overflow-hidden justify-center items-center w-full h-full">
                       <LazyImage
                         src={client.logo}
                         alt={client.name}
-                        className="w-3/4 transition-transform duration-300 transform h-3/4 hover:scale-110"
+                        className="w-3/4 h-3/4 transition-transform duration-300 transform hover:scale-110"
                         centerImage={true}
                         onError={(e) => {
                           e.target.src = '/clients/placeholder.png';

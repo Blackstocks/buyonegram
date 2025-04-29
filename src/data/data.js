@@ -2,7 +2,7 @@ import {
     moong, kalaChanna, kaliMasoor, moongDal, uradSabut, arharDal, moongMogar, channaDal, mothSabut,
     whiteMatar, sabudana, uradChilka, chitraRajma, cholaMogar, mishriCutting, mixDal, jhamboRajma, kabuliChanna,
     lobiya, masoorDal, mufliDana,
-  } from "../assets/index";
+  } from "../public/index";
 
   const productsData = [
     {

@@ -7,7 +7,7 @@ import {
   masoorDal,
   moong,
   kabuliChanna
-} from '../../assets';
+} from '../../public';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -86,12 +86,12 @@ const Hero = () => {
     >
       {/* Background Decorations */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 rounded-full left-1/4 w-72 h-72 bg-primary-100 blur-3xl opacity-30" />
-        <div className="absolute bottom-0 rounded-full right-1/4 w-96 h-96 bg-secondary-100 blur-3xl opacity-30" />
+        <div className="absolute top-0 left-1/4 w-72 h-72 rounded-full opacity-30 blur-3xl bg-primary-100" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 rounded-full opacity-30 blur-3xl bg-secondary-100" />
       </div>
 
       <div className="container relative z-10 mx-auto container-padding">
-        <div className="flex flex-wrap items-center gap-12 lg:gap-0">
+        <div className="flex flex-wrap gap-12 items-center lg:gap-0">
           <div
             ref={textRef}
             className="w-full lg:w-1/2 lg:pr-12"
@@ -105,9 +105,9 @@ const Hero = () => {
                 Trusted by 1500+ Businesses
               </span>
               <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl lg:text-7xl text-balance">
-                Bridging Local <span className="mb-6 text-5xl font-bold leading-tight text-transparent md:text-6xl lg:text-7xl text-balance bg-gradient-to-r from-green-600 via-green-500 to-yellow-400 bg-clip-text">Harvests</span> with Global Demand
+                Bridging Local <span className="mb-6 text-5xl font-bold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-green-600 via-green-500 to-yellow-400 md:text-6xl lg:text-7xl text-balance">Harvests</span> with Global Demand
               </h1>
-              <p className="max-w-2xl mb-8 text-xl leading-relaxed text-neutral-600">
+              <p className="mb-8 max-w-2xl text-xl leading-relaxed text-neutral-600">
                 Welcome to Buy One Gram – the B2B marketplace revolutionizing the way agricultural trade works. We connect verified farmers with global buyers, delivering premium pulses and beans with transparency, quality, and trust.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -133,7 +133,7 @@ const Hero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1 }}
             >
-              <div className="absolute inset-0 overflow-hidden rounded-2xl shadow-strong">
+              <div className="overflow-hidden absolute inset-0 rounded-2xl shadow-strong">
                 {images.map((img, index) => (
                   <motion.div 
                     key={index}

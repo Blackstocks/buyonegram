@@ -13,7 +13,7 @@ import {
   kabuliChanna, 
   mufliDana, 
   mothSabut 
-} from '../../assets';
+} from '../../public';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,7 +60,7 @@ const ProductCard = ({ product, index }) => {
       viewport={{ once: true }}
       className="group"
     >
-      <div className="relative mb-4 overflow-hidden rounded-2xl bg-neutral-100">
+      <div className="overflow-hidden relative mb-4 rounded-2xl bg-neutral-100">
         <div className="aspect-[3/4] w-full relative">
           {product.images.map((img, imgIndex) => (
             <motion.div 
@@ -144,7 +144,7 @@ const ProductShowcase = () => {
           <h2 className="text-4xl font-bold md:text-5xl lg:text-6xl text-neutral-800">
             Best Seller&apos;s
           </h2>
-          <p className="max-w-3xl mx-auto text-xl text-neutral-600">
+          <p className="mx-auto max-w-3xl text-xl text-neutral-600">
           Discover our selection of premium quality pulses and beans sourced from trusted farmers worldwide:
           </p>
         </div>

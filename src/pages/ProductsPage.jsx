@@ -12,7 +12,7 @@ import {
   mishriCutting500, mixDal500, jhamboRajma500, kabuliChanna500, lobiya500, masoorDal500, mufliDana500,
   // Package size imports
   pkg5kg, pkg30kg
-} from "../assets";
+} from "../public";
 import emailjs from '@emailjs/browser';
 import { productsData, featuredProducts } from "../data/data";
 
@@ -126,7 +126,7 @@ const FeaturedProduct = ({ product, direction }) => {
         ease: "easeInOut",
         staggerChildren: 0.1
       }}
-      className="grid items-center gap-8 md:grid-cols-2"
+      className="grid gap-8 items-center md:grid-cols-2"
     >
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -135,7 +135,7 @@ const FeaturedProduct = ({ product, direction }) => {
           duration: 0.5,
           delay: 0.2
         }}
-        className="p-8 bg-white shadow-lg rounded-2xl"
+        className="p-8 bg-white rounded-2xl shadow-lg"
       >
         <motion.h3 
           initial={{ opacity: 0, y: -10 }}
@@ -356,13 +356,13 @@ const ProductCard = ({ product, onBuyNowClick, selectedWeight, setSelectedWeight
         duration: 0.3,
         ease: "easeOut"
       }}
-      className="overflow-hidden bg-white shadow-lg rounded-2xl"
+      className="overflow-hidden bg-white rounded-2xl shadow-lg"
     >
-      <div className="relative w-full overflow-hidden aspect-square">
+      <div className="overflow-hidden relative w-full aspect-square">
         <motion.img
           src={getProductImage()}
           alt={productName}
-          className="object-contain w-full h-full p-4"
+          className="object-contain p-4 w-full h-full"
           whileHover={{ scale: 1.1 }}
           transition={{ 
             duration: 0.5,
@@ -373,7 +373,7 @@ const ProductCard = ({ product, onBuyNowClick, selectedWeight, setSelectedWeight
           }}
         />
         <motion.div 
-          className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
+          className="absolute inset-0 bg-gradient-to-t to-transparent from-black/20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -436,7 +436,7 @@ const ProductCard = ({ product, onBuyNowClick, selectedWeight, setSelectedWeight
           onClick={() => onBuyNowClick(product, selectedWeight)}
           whileHover={{ scale: 1.03, backgroundColor: "" }}
           whileTap={{ scale: 0.97 }}
-          className="w-full py-3 font-medium text-white transition-colors rounded-lg bg-primary-600 hover:bg-primary-700"
+          className="py-3 w-full font-medium text-white rounded-lg transition-colors bg-primary-600 hover:bg-primary-700"
         >
           Buy Now
         </motion.button>
@@ -645,27 +645,27 @@ const ProductsPage = () => {
   const formattedPrice = typeof price === 'number' ? price.toFixed(2) : '0.00';
 
   return (
-    <div className="min-h-screen pt-20 bg-gray-50">
+    <div className="pt-20 min-h-screen bg-gray-50">
       <section className="relative py-16 text-white bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="container px-4 mx-auto">
           <h2 className="mb-8 text-3xl font-bold">Featured Product</h2>
 
-          <div className="absolute z-10 -translate-y-1/2 top-1/2 left-4">
+          <div className="absolute left-4 top-1/2 z-10 -translate-y-1/2">
             <motion.button
               onClick={prevProduct}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="p-3 transition-colors rounded-full bg-white/20 hover:bg-white/30"
+              className="p-3 rounded-full transition-colors bg-white/20 hover:bg-white/30"
             >
               <FaChevronLeft className="text-xl text-white" />
             </motion.button>
           </div>
-          <div className="absolute z-10 -translate-y-1/2 top-1/2 right-4">
+          <div className="absolute right-4 top-1/2 z-10 -translate-y-1/2">
             <motion.button
               onClick={nextProduct}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              className="p-3 transition-colors rounded-full bg-white/20 hover:bg-white/30"
+              className="p-3 rounded-full transition-colors bg-white/20 hover:bg-white/30"
             >
               <FaChevronRight className="text-xl text-white" />
             </motion.button>
@@ -699,21 +699,21 @@ const ProductsPage = () => {
 
       <section className="py-16">
         <div className="container px-4 mx-auto">
-          <div className="max-w-2xl mx-auto mb-12">
+          <div className="mx-auto mb-12 max-w-2xl">
             <div className="relative">
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full py-4 pl-12 pr-4 text-lg border-2 border-gray-200 rounded-xl focus:border-primary-600 focus:outline-none"
+                className="py-4 pr-4 pl-12 w-full text-lg rounded-xl border-2 border-gray-200 focus:border-primary-600 focus:outline-none"
               />
-              <FaSearch className="absolute text-xl text-gray-400 transform -translate-y-1/2 left-4 top-1/2" />
+              <FaSearch className="absolute left-4 top-1/2 text-xl text-gray-400 transform -translate-y-1/2" />
             </div>
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
+          <div className="flex flex-wrap gap-4 justify-center mb-8">
             <motion.button
               whileHover={{ y: -2, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -766,7 +766,7 @@ const ProductsPage = () => {
               whileHover={{ y: -2, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               disabled
-              className="px-6 py-3 font-medium text-gray-400 transition-colors bg-gray-100 rounded-lg shadow-sm cursor-not-allowed"
+              className="px-6 py-3 font-medium text-gray-400 bg-gray-100 rounded-lg shadow-sm transition-colors cursor-not-allowed"
             >
               Millets
             </motion.button>
@@ -774,7 +774,7 @@ const ProductsPage = () => {
               whileHover={{ y: -2, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               disabled
-              className="px-6 py-3 font-medium text-gray-400 transition-colors bg-gray-100 rounded-lg shadow-sm cursor-not-allowed"
+              className="px-6 py-3 font-medium text-gray-400 bg-gray-100 rounded-lg shadow-sm transition-colors cursor-not-allowed"
             >
               Masale
             </motion.button>
@@ -782,13 +782,13 @@ const ProductsPage = () => {
               whileHover={{ y: -2, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               disabled
-              className="px-6 py-3 font-medium text-gray-400 transition-colors bg-gray-100 rounded-lg shadow-sm cursor-not-allowed"
+              className="px-6 py-3 font-medium text-gray-400 bg-gray-100 rounded-lg shadow-sm transition-colors cursor-not-allowed"
             >
               Others
             </motion.button>
           </div>
 
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex gap-4 justify-center mb-8">
             {['500gm', '1kg', '5kg', '30kg'].map((weight) => (
               <motion.button
                 key={weight}
@@ -842,7 +842,7 @@ const ProductsPage = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            className="flex fixed inset-0 z-50 justify-center items-center p-4 backdrop-blur-sm bg-black/60"
             onClick={handleCloseModal}
           >
             <motion.div
@@ -855,14 +855,14 @@ const ProductsPage = () => {
                 stiffness: 300,
                 mass: 0.8
               }}
-              className="w-full max-w-md p-6 bg-white shadow-2xl rounded-2xl"
+              className="p-6 w-full max-w-md bg-white rounded-2xl shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex justify-between items-center mb-4">
                 <h3 className="text-2xl font-bold text-gray-800">Product Inquiry</h3>
                 <button 
                   onClick={handleCloseModal}
-                  className="p-1 text-gray-500 transition-colors rounded-full hover:bg-gray-100 hover:text-gray-700"
+                  className="p-1 text-gray-500 rounded-full transition-colors hover:bg-gray-100 hover:text-gray-700"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -884,14 +884,14 @@ const ProductsPage = () => {
                       href="https://play.google.com/store/apps/details?id=com.freshstock.app" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="inline-block w-full px-4 py-2 text-center text-white transition-colors rounded-lg bg-primary-600 hover:bg-primary-700"
+                      className="inline-block px-4 py-2 w-full text-center text-white rounded-lg transition-colors bg-primary-600 hover:bg-primary-700"
                     >
                       Download FreshStock App
                     </a>
                   </div>
                   <button
                     onClick={handleCloseModal}
-                    className="w-full px-4 py-2 font-medium text-white rounded-lg bg-primary-600 hover:bg-primary-700"
+                    className="px-4 py-2 w-full font-medium text-white rounded-lg bg-primary-600 hover:bg-primary-700"
                   >
                     Close
                   </button>
@@ -907,7 +907,7 @@ const ProductsPage = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+                        className="px-4 py-2 w-full rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
                     
@@ -919,7 +919,7 @@ const ProductsPage = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+                        className="px-4 py-2 w-full rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
                     
@@ -931,7 +931,7 @@ const ProductsPage = () => {
                         value={formData.contact}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+                        className="px-4 py-2 w-full rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                       />
                     </div>
                     
@@ -942,7 +942,7 @@ const ProductsPage = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         rows="3"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"
+                        className="px-4 py-2 w-full rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                       ></textarea>
                     </div>
                   </div>

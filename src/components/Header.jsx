@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes, FaUser } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.png'
+import logo from '../public/logo.png'
 
 
 
@@ -26,9 +26,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed z-50 w-full shadow-md bg-white/90 backdrop-blur-sm">
+    <header className="fixed z-50 w-full shadow-md backdrop-blur-sm bg-white/90">
       <div className="container mx-auto">
-        <div className="flex items-center justify-between h-20 container-padding">
+        <div className="flex justify-between items-center h-20 container-padding">
           {/* Logo */}
           <RouterLink to="/" className="flex items-center">
             {/* <LazyImage src={logo} alt="BuyOneGram"  /> */}
@@ -36,7 +36,7 @@ const Header = () => {
           </RouterLink>
 
           {/* Desktop Navigation */}
-          <nav className="items-center hidden space-x-8 lg:flex">
+          <nav className="hidden items-center space-x-8 lg:flex">
             {navItems.map((item) => (
               <RouterLink
                 key={item.name}
@@ -51,13 +51,13 @@ const Header = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="items-center hidden space-x-6 lg:flex">
+          <div className="hidden items-center space-x-6 lg:flex">
             {/* Sign Up Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleSignup}
-              className="flex items-center px-4 py-2 space-x-2 text-white transition-colors rounded-lg bg-primary-600 hover:bg-primary-700"
+              className="flex items-center px-4 py-2 space-x-2 text-white rounded-lg transition-colors bg-primary-600 hover:bg-primary-700"
             >
               <FaUser />
               <span>Sign In</span>
@@ -66,7 +66,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="p-2 transition-colors rounded-lg lg:hidden hover:bg-neutral-100"
+            className="p-2 rounded-lg transition-colors lg:hidden hover:bg-neutral-100"
             onClick={toggleMenu}
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -88,10 +88,10 @@ const Header = () => {
                 {item.name}
               </RouterLink>
             ))}
-            <div className="flex items-center justify-between pt-4 mt-4 border-t">
+            <div className="flex justify-between items-center pt-4 mt-4 border-t">
               
               <button 
-                className="flex items-center px-4 py-2 space-x-2 text-white transition-colors rounded-lg bg-primary-600 hover:bg-primary-700"
+                className="flex items-center px-4 py-2 space-x-2 text-white rounded-lg transition-colors bg-primary-600 hover:bg-primary-700"
                 onClick={toggleSignup}
               >
                 <FaUser />

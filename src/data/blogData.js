@@ -5,7 +5,7 @@ import {
   blogShortPostImg2, 
   blogShortPostImg3, 
   blogShortPostImg4 
-} from "../assets";
+} from "../public";
 
 
 export const blogShortPosts = [
